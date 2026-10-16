@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Citizen Complaint Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .public-home{min-height:calc(100vh - 74px)}
+    .hero-section{min-height:560px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:70px;padding:70px 0}
+    .hero-content h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-2.5px;margin:15px 0 22px}
+    .hero-content>p{max-width:650px;color:#687a80;font-size:18px;line-height:1.7}
+    .hero-actions{display:flex;gap:12px;margin-top:30px}
+    .hero-actions .button{min-width:130px}
+    .hero-card{background:#fff;border:1px solid #dfeaea;border-radius:22px;padding:35px;box-shadow:0 20px 60px rgba(26,59,64,.08)}
+    .hero-card-icon{font-size:50px;margin-bottom:20px}.hero-card h2{margin:0 0 25px;font-size:25px}
+    .hero-feature{display:flex;align-items:center;gap:13px;padding:14px 0;border-bottom:1px solid #edf1f1}
+    .hero-feature:last-child{border-bottom:0}.hero-feature span{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#edf7f5;color:#0f766e;font-weight:800}
+    .hero-feature p{margin:0;color:#435e65;font-weight:650}
+    .public-info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:60px}
+    .info-card{background:#fff;border:1px solid #e1eaea;border-radius:16px;padding:25px}.info-icon{font-size:30px;margin-bottom:12px}.info-card h3{margin:0 0 8px}.info-card p{color:#718188;line-height:1.6;margin-bottom:0}
+    .nav-home-link{color:#31545b}.login-divider{display:flex;align-items:center;gap:10px;margin:22px 0 5px;color:#9aa6aa;font-size:11px;font-weight:700}.login-divider:before,.login-divider:after{content:"";flex:1;height:1px;background:#e4ebeb}
+    .toast{position:fixed;right:20px;bottom:20px;z-index:100;padding:13px 16px;background:#173f42;color:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+    .user-profile{background:#edf7f5;border:1px solid #dceceb;border-radius:14px;padding:18px;margin-bottom:22px}
+    .user-profile strong{display:block;font-size:20px;margin-bottom:8px}.user-profile span{display:block;color:#718188;font-size:13px;margin:4px 0}
+    .photo-preview{max-width:180px;max-height:120px;object-fit:cover;border-radius:10px;margin-top:8px}
+    @media(max-width:900px){.hero-section{grid-template-columns:1fr;gap:40px;padding:45px 0}.public-info{grid-template-columns:1fr}}
+    @media(max-width:650px){.hero-actions{flex-direction:column}.hero-actions .button{width:100%}}
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <a href="#/" class="brand" onclick="navigate('home');return false;">
+    <span class="brand-mark">SC</span><span><strong>Smart Citizen</strong><small>Complaint Management</small></span>
+  </a>
+  <nav class="nav-actions" id="navbarActions"></nav>
+</header>
+<main class="page-container" id="app"></main>
+<div id="toastRoot"></div>
+<script src="script.js"></script>
+</body>
+</html>
